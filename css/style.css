@@ -1,0 +1,571 @@
+@import 'utilities.css';
+
+
+:root{
+
+--primary:#2E86C1  ;
+--dark:#1C2833 ;
+--pure:#FFFFFF;
+--ternary:#898989;
+--light:#F2F2F2;
+--secondary: #070606;
+}
+body{
+    font-family: 'Sora', sans-serif;
+    height: 5000px;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    -webkit-font-smoothing:antialiased;/*isme humne esa kra ki jo border thi main vo usme gapping this window se thori to use hatane ke liye ye kara he humne*/
+}
+
+header{
+
+    background: var(--dark);
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 75% 90%, 0 100%);/*polygonjesa shape dene ke liye hume co-ordinates dene hoge or hum total panch lerhe he
+    top left corner= (0,0)
+    top right corner=(100%,0)
+    bottom right corner=(100%,100%)
+    bottom left corner=()*/
+    padding-bottom: 5rem;
+
+}
+
+.container{
+    max-width: 1152px;
+    padding: 0 15px;/*isme 0 he for top-bottom or side ke liye he 15px*/
+    margin: 0 auto;
+}
+.container .right .btn a{
+    text-decoration: none;
+    color: var(--pure);
+}
+
+@media (min-width: 576px){
+    .container{
+        max-width: 540px;
+    }
+}
+
+@media (min-width: 768px){
+    .container{
+        max-width: 720px;
+    }
+}
+@media (min-width: 992px){
+    .container{
+        max-width: 960px;
+    }
+}
+@media (min-width: 1200px){
+    .container{
+        max-width: 1152px;
+    }
+}
+
+header nav .left a{
+    color: var(--pure);
+    text-decoration: none;
+    margin-right: 2rem;
+    text-transform: uppercase;
+    transition: all .3s ease;
+
+}
+header nav .left a:hover{
+    color: var(--primary);
+}
+
+header nav {
+    padding: 2rem 0;
+}
+
+header nav .branding{
+    margin-right: 0rem;
+    
+}
+
+.hero{
+    padding: 3rem 0;
+}
+
+.hero .left img{
+    width: 500px;
+}
+.hero .right {
+    color: var(--pure);
+}
+.hero .right a{
+    color: var(--pure);
+    padding: 2rem;
+    text-decoration: none;
+}
+
+.hero .right h6{
+    font-size: 1.6rem;
+    color: var(--primary);
+    margin-bottom: 1rem;
+    font-weight: 400;
+}
+.hero .right h1{
+    font-size: 4rem;
+    font-weight: 100;
+    line-height: 1.2;
+    margin-bottom: 2rem;
+}
+.hero .right h1 span{
+    color: var(--primary);
+}
+.hero .right p{
+    line-height: 2;
+    margin-bottom: 1.5rem;
+    font-weight: 400;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+.hero .right{
+    margin-top: -7rem;
+}
+
+
+
+section{
+    padding: 6rem 0;
+}
+
+section.about .about-me-img{
+    height: 450px;
+}
+section.about h1{
+    margin-bottom: 1rem;
+    font-size: 1.6rem;
+    font-weight: 400;
+}
+section.about h1 span{
+    color: var(--primary);
+}
+section.about h3{
+    font-size: 1rem;
+    margin-bottom: 1rem;
+    font-weight: 400;
+}
+section.about p{
+    font-family: 'Lato', sans-serif;
+    color: var(--ternary);
+    margin-bottom: 2rem;
+    line-height: 1.8;
+}
+section.about h4{
+    margin-bottom: 1rem;
+    color: var(--primary);
+}
+section.about .social{
+    display: flex;
+}
+section.about .social a{
+    background-size: contain;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 50px;
+    width: 50px;
+    margin-right: 2rem;
+    margin-left: 2rem;
+}
+
+section.about .social a img{
+    width: 100%;
+    height: 100%;
+    padding: 0.5rem;
+    
+}
+
+.section-heading{
+    color: var(-secondary);
+    text-align: center;
+    line-height: 05;
+}
+.section-heading span{
+    color: var(--primary);
+}
+.section-heading + p{
+    color: var(--ternary);
+    font-family: 'Lato', sans-serif;
+    margin-bottom: 8rem;
+    text-align: center;
+}
+
+section.education {
+    background: var(--light);
+}
+
+section.education .card-wrapper{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-column-gap: 2rem;
+    grid-row-gap: 6rem;
+}
+
+section.education .card-wrapper .card{
+    background: var(--pure);
+    padding: 3rem 2rem;
+    position: relative;
+    padding-top: 5rem;
+    text-align: center;
+    transition: all .3s ease;
+}
+
+section.education .card-wrapper .card img{
+    position: absolute;
+    top: -3.5rem;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-bottom: 3rem;
+}
+
+section.education .card-wrapper .card h2{
+    font-weight: 400;
+    font-size: 1.2rem;
+    margin-bottom: 3rem;
+}
+
+section.education .card-wrapper .card p{
+    font-family: 'Lato', sans-serif;
+    color: var(--ternary);
+    line-height: 1.6;
+    margin-bottom: 2rem;
+}
+
+section.education .card-wrapper .card:hover{
+    background: var(--dark);
+}
+section.education .card-wrapper .card:hover h2, section.education .card-wrapper .card:hover p{
+    color: var(--pure);
+
+}
+
+section.Projects{
+    text-align: center;
+    background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)),url(../images/project1.jpg);
+    color: var(--pure);
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 67% 80%, 0 100%);
+    padding-bottom: 14rem;
+}
+section.Projects a{
+    text-decoration: none;
+    color: var(--dark);
+}
+section.Projects h1{
+    font-size: 2rem;
+    margin-bottom: 6rem;
+}
+section.Projects h1 span{
+    color: var(--primary);
+}
+section.details .slider .side img{
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 6rem;
+
+}
+
+section.details .slider .side{
+    text-align: center;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    
+}
+section.details .slider .slider p{
+    font-family: 'Lato',sans-serif;
+    margin-bottom: 3rem;
+    color: var(--ternary);
+
+}
+section.details .slider .slide h1{
+    color: var(--primary);
+    font-weight: 400;
+    margin-bottom: 3rem;
+}
+section.details .slider-dots .dots{
+    list-style-type: none;
+    display: flex!important;
+    justify-content: center;
+}
+section.details .slider-dots{
+    margin-top: 3rem;
+}
+section.details .slider-dots button{
+    font-size: 0rem;
+    width: 8px;
+    height: 5px;
+    margin-right: 0.3rem;
+    border: none;
+    outline: none;
+    background: var(--ternary);
+    border-radius: 50px;
+    cursor: pointer;
+}
+section.details .dots li.slick-active button{
+    background: var(--primary);
+    width: 20px;
+}
+
+section.internship{
+    background: var(--dark);
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 75% 90%, 0 100%);
+    padding-bottom: 15rem;
+}
+section.internship .section-heading{
+    color: var(--pure);
+}
+section.internship .card-wrapper{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 4rem;
+}
+section.internship .card-wrapper .card{
+    background: var(--pure);
+}
+section.internship .card-wrapper .card .img-wrapper img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+section.internship .card-wrapper .card .card-content{
+    padding: 1rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
+}
+section.internship .card-wrapper .card .card-content h1{
+    font-size: 1rem;
+    font-weight: 900;
+    margin-bottom: 1rem;
+}
+section.internship .card-wrapper .card .card-content a{
+    color: var(--secondary);
+    text-decoration: none;
+}
+section.internship .card-wrapper .card .card-content a:hover{
+    color: var(--primary);
+}
+section.internship .card-wrapper .card .card-content span{
+    color: var(--ternary);
+    font-size: 0.8rem;
+}
+section.internship .card-wrapper .card .card-content p{
+    font-family: 'Lato', sans-serif;
+    color: var(--ternary);
+    margin-top: 1rem;
+}
+
+
+section.contact .card-wrapper .card img{
+    width: 5rem;
+    height: 5rem;
+    object-fit: cover;
+}
+section.contact .card-wrapper {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-gap: 10rem;
+}
+section.contact .card-wrapper .card{
+    text-align: center;
+}
+section.contact .section-heading{
+    padding-bottom: 4rem;
+}
+section.contact .card-wrapper .card img{
+    margin-bottom: 3rem;
+}
+section.contact .card-wrapper .card h2{
+    font-weight: 400;
+    margin-bottom:1rem;
+}
+section.contact .card-wrapper .card h6{
+    font-size: 1rem;
+    color: var(--ternary);
+    font-weight: 400;
+}
+
+footer{
+    background: var(--light);
+    text-align: center;
+    padding: 5rem 0;
+}
+
+footer .footer-social img{
+    margin-right: 3rem;
+}
+
+
+.site-main-wrapper{
+    position: relative;
+}
+.hamburger{
+    position: absolute;
+    top: 40px;
+    right: 40px;
+    z-index: 11;/*ye isliye kyuki jo image thi vo piche chu gayi thi to use upr laane ke liye*/
+    background: none;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    display: none;
+    
+}
+.hamburger img{
+    width: 30px;
+}
+
+.mobile-nav{
+    position: fixed;
+    top: 0rem;
+    left: 0rem;
+    z-index: 1001;
+    background: var(--light);
+    width: 100%;
+    height: 100%;
+    padding: 2rem;
+    padding-top: 5rem;
+    transform: translateX(-100%);
+    transition: all .5s ease-in-out;
+}
+.open{
+    transform: translateX(0);
+}
+.times{
+    position: fixed;
+    top: 30px;
+    right: 30px;
+    background: none;
+    outline: none;
+    cursor: pointer;
+}
+.times img{
+    width: 30px;
+}
+
+.mobile-nav ul{
+    list-style-type: none;
+}
+.mobile-nav ul li a{
+    color: var(--secondary);
+    text-decoration: none;
+    font-size: 2rem;
+}
+/*this is for i-pad view*/
+@media (max-width:1024px){
+    header #main-nav{
+        display: none;
+    }
+    .hamburger{
+        display: block;
+    }
+    .hero .left img{
+        width:300px;
+    }
+    .hero .right h1{
+        font-size: 3rem;
+    }
+    .hero{
+        padding-top: 13rem;
+    }
+    section.about .about-me-img{
+        height: 500px;
+        margin-bottom: 10rem;
+    }
+    section.education .card-wrapper{
+        grid-template-columns: repeat(2,1fr);
+    }
+    section.internship .card-wrapper{
+        grid-template-columns: repeat(1,1fr);
+    }
+    section.internship{
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 62% 95%, 0 100%);
+
+    }
+}
+/*this is for mobile view*/
+@media (max-width:576px){
+    .hero{
+        flex-direction: column;
+    }
+    header{
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 75% 95%, 0 100%);
+    }
+    .hero .right{
+        position: absolute;
+        top: 260px;
+        padding: 0 1rem;
+        background: linear-gradient(rgba(0,0,0,0), rgba(0,0,0,0.9));
+    }
+    .hero .left{
+        margin-top: -5rem;
+        margin-right: -9rem;
+        padding-bottom: 8rem;
+    }
+    .hero .left img{
+        width: 550px;
+        height: 550px;
+    }
+    .hero .right p{
+        margin-bottom: 4.2rem;
+        margin-top: 1.9rem;
+    }
+    .about-inner-wrap{
+        flex-direction: column;
+    }  
+    section.about .about-me-img{
+        margin-bottom: 1rem;
+    } 
+    section.about h1{
+        margin-bottom: 2rem;
+        text-align: center;
+    }
+    section.about h3{
+        margin-bottom: 2rem;
+        text-align: center;
+    }
+    section.about p{
+        text-align: center;
+    }
+    section.about h4{
+        text-align: center;
+    }
+    .about .social{
+        justify-content: center;
+    }
+    section{
+        padding: 3rem 0;
+    }
+    .section-heading{
+        line-height: 02;
+    }
+    section.education .card-wrapper{
+        grid-template-columns: repeat(1,1fr);
+        margin-top: 6rem;
+    }
+    section.contact .card-wrapper{
+        grid-template-columns: repeat(1,1fr);
+        grid-gap: 3rem;
+    }
+    .section-heading + p{
+        margin-bottom: 3rem;
+    }
+    section.internship{
+       clip-path:  polygon(0 0, 100% 0, 100% 100%, 67% 97%, 0 100%);
+    }
+    
+}
+
+
+
+
+
