@@ -478,7 +478,7 @@ footer .footer-social img{
         padding-top: 13rem;
     }
     section.about .about-me-img{
-        height: 500px;
+        height: 300px;
         margin-bottom: 10rem;
     }
     section.education .card-wrapper{
@@ -525,6 +525,9 @@ footer .footer-social img{
     section.about .about-me-img{
         margin-bottom: 1rem;
     } 
+    section.about .social a{
+        margin-left: 2rem;
+       margin-right: 2rem;}
     section.about h1{
         margin-bottom: 2rem;
         text-align: center;
